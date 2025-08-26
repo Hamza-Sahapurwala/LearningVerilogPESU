@@ -1,0 +1,357 @@
+$date
+	Mon Aug 18 15:13:23 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module rippleadder $end
+$var wire 4 ! o [3:0] $end
+$var wire 1 " cout $end
+$var reg 1 # cin $end
+$var reg 1 $ clk $end
+$var reg 4 % i0 [3:0] $end
+$var reg 4 & i1 [3:0] $end
+$var reg 1 ' reset $end
+$var integer 32 ( i [31:0] $end
+$scope module u0 $end
+$var wire 4 ) a [3:0] $end
+$var wire 4 * b [3:0] $end
+$var wire 1 # cin $end
+$var wire 4 + sum [3:0] $end
+$var wire 1 " cout $end
+$var wire 3 , c [2:0] $end
+$scope module u0 $end
+$var wire 1 - a $end
+$var wire 1 . b $end
+$var wire 1 # c $end
+$var wire 1 / carry $end
+$var wire 1 0 sum $end
+$var wire 1 1 w1 $end
+$var wire 1 2 w2 $end
+$var wire 1 3 w3 $end
+$var wire 1 4 w4 $end
+$var wire 1 5 w5 $end
+$upscope $end
+$scope module u1 $end
+$var wire 1 6 a $end
+$var wire 1 7 b $end
+$var wire 1 8 c $end
+$var wire 1 9 carry $end
+$var wire 1 : sum $end
+$var wire 1 ; w1 $end
+$var wire 1 < w2 $end
+$var wire 1 = w3 $end
+$var wire 1 > w4 $end
+$var wire 1 ? w5 $end
+$upscope $end
+$scope module u2 $end
+$var wire 1 @ a $end
+$var wire 1 A b $end
+$var wire 1 B c $end
+$var wire 1 C carry $end
+$var wire 1 D sum $end
+$var wire 1 E w1 $end
+$var wire 1 F w2 $end
+$var wire 1 G w3 $end
+$var wire 1 H w4 $end
+$var wire 1 I w5 $end
+$upscope $end
+$scope module u3 $end
+$var wire 1 J a $end
+$var wire 1 K b $end
+$var wire 1 L c $end
+$var wire 1 " carry $end
+$var wire 1 M sum $end
+$var wire 1 N w1 $end
+$var wire 1 O w2 $end
+$var wire 1 P w3 $end
+$var wire 1 Q w4 $end
+$var wire 1 R w5 $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0R
+0Q
+0P
+0O
+0N
+0M
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+1'
+b0 &
+b0 %
+0$
+0#
+0"
+b0 !
+$end
+#50
+1$
+#100
+0$
+#125
+0'
+#150
+1$
+#160
+b1 (
+#200
+0$
+#250
+1$
+#260
+b1 !
+b1 +
+10
+b10 (
+1#
+#300
+0$
+#350
+1$
+#360
+1:
+18
+b1 ,
+1/
+15
+12
+1-
+1.
+b10 !
+b10 +
+00
+b11 (
+b1 %
+b1 )
+b1 &
+b1 *
+0#
+#400
+0$
+#450
+1$
+#460
+b11 !
+b11 +
+10
+13
+14
+b100 (
+1#
+#500
+0$
+#550
+1$
+#560
+0:
+08
+1D
+0/
+1B
+05
+1?
+b10 ,
+19
+0=
+02
+1<
+0>
+0-
+16
+0.
+17
+b100 !
+b100 +
+00
+03
+04
+b101 (
+b10 %
+b10 )
+b10 &
+b10 *
+0#
+#600
+0$
+#650
+1$
+#660
+b101 !
+b101 +
+10
+b110 (
+1#
+#700
+0$
+#750
+1$
+#760
+1"
+1R
+11
+1O
+1J
+1.
+1K
+b101 !
+b101 +
+10
+b111 (
+b1010 %
+b1010 )
+b1011 &
+b1011 *
+0#
+#800
+0$
+#850
+1$
+#860
+1:
+1=
+1>
+18
+b11 ,
+1/
+b110 !
+b110 +
+00
+14
+b1000 (
+1#
+#900
+0$
+#950
+1$
+#960
+1M
+1P
+1Q
+1L
+0:
+0=
+0>
+1I
+1C
+08
+1G
+1F
+1H
+b110 ,
+0/
+1@
+1A
+b1101 !
+b1101 +
+10
+04
+b1001 (
+b1110 %
+b1110 )
+b1111 &
+b1111 *
+0#
+#1000
+0$
+#1050
+1$
+#1060
+1:
+1=
+1>
+18
+b111 ,
+1/
+b1110 !
+b1110 +
+00
+14
+b1010 (
+1#
+#1100
+0$
+#1150
+1$
+#1200
+0$
+#1250
+1$
+#1300
+0$
+#1350
+1$
+#1400
+0$
+#1450
+1$
+#1500
+0$
+#1550
+1$
+#1600
+0$
+#1650
+1$
+#1700
+0$
+#1750
+1$
+#1800
+0$
+#1850
+1$
+#1900
+0$
+#1950
+1$
+#2000
+0$
+#2050
+1$
+#2060

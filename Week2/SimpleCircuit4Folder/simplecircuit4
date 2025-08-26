@@ -1,0 +1,132 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000018f8739d870 .scope module, "notgate" "notgate" 2 6;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "y";
+o0000018f8728cfb8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000018f87277ea0_0 .net "a", 0 0, o0000018f8728cfb8;  0 drivers
+v0000018f8739db90_0 .net "y", 0 0, L_0000018f872d23c0;  1 drivers
+L_0000018f872d23c0 .reduce/nor o0000018f8728cfb8;
+S_0000018f8739da00 .scope module, "tb_simple_circuit4" "tb_simple_circuit4" 3 1;
+ .timescale 0 0;
+v0000018f87285210_0 .net "D", 0 0, L_0000018f87396ba0;  1 drivers
+v0000018f873963e0_0 .net "F", 0 0, L_0000018f872d2f20;  1 drivers
+v0000018f872d1920_0 .var "O", 0 0;
+v0000018f872d20a0_0 .var "P", 0 0;
+v0000018f872d1b00_0 .var "T", 0 0;
+S_0000018f87284360 .scope module, "M1" "simple_circuit4" 3 4, 2 16 0, S_0000018f8739da00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "T";
+    .port_info 1 /INPUT 1 "P";
+    .port_info 2 /INPUT 1 "O";
+    .port_info 3 /OUTPUT 1 "D";
+    .port_info 4 /OUTPUT 1 "F";
+    .port_info 5 /NODIR 0 "";
+v0000018f87284ef0_0 .net "D", 0 0, L_0000018f87396ba0;  alias, 1 drivers
+v0000018f87284f90_0 .net "F", 0 0, L_0000018f872d2f20;  alias, 1 drivers
+v0000018f87285030_0 .net "O", 0 0, v0000018f872d1920_0;  1 drivers
+v0000018f872850d0_0 .net "P", 0 0, v0000018f872d20a0_0;  1 drivers
+v0000018f87285170_0 .net "T", 0 0, v0000018f872d1b00_0;  1 drivers
+S_0000018f87285ad0 .scope module, "G1" "andgate" 2 19, 2 1 0, S_0000018f87284360;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "y";
+L_0000018f87396ba0 .functor AND 1, v0000018f872d1b00_0, v0000018f872d20a0_0, C4<1>, C4<1>;
+v0000018f8739dc30_0 .net "a", 0 0, v0000018f872d1b00_0;  alias, 1 drivers
+v0000018f872844f0_0 .net "b", 0 0, v0000018f872d20a0_0;  alias, 1 drivers
+v0000018f87284590_0 .net "y", 0 0, L_0000018f87396ba0;  alias, 1 drivers
+S_0000018f87285c60 .scope module, "G3" "orgate" 2 20, 2 11 0, S_0000018f87284360;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "y";
+L_0000018f872d2f20 .functor OR 1, L_0000018f87396ba0, v0000018f872d1920_0, C4<0>, C4<0>;
+v0000018f87285df0_0 .net "a", 0 0, L_0000018f87396ba0;  alias, 1 drivers
+v0000018f87285e90_0 .net "b", 0 0, v0000018f872d1920_0;  alias, 1 drivers
+v0000018f87284e50_0 .net "y", 0 0, L_0000018f872d2f20;  alias, 1 drivers
+    .scope S_0000018f8739da00;
+T_0 ;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018f872d1b00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018f872d20a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018f872d1920_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018f872d1b00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018f872d20a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018f872d1920_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018f872d1b00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018f872d20a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018f872d1920_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018f872d1b00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018f872d20a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018f872d1920_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018f872d1b00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018f872d20a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018f872d1920_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018f872d1b00_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018f872d20a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018f872d1920_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018f872d1b00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018f872d20a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000018f872d1920_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018f872d1b00_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018f872d20a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000018f872d1920_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0000018f8739da00;
+T_1 ;
+    %vpi_call 3 18 "$monitor", $time, "t=%b, p=%b, o=%b, d=%b, f=%b", v0000018f872d1b00_0, v0000018f872d20a0_0, v0000018f872d1920_0, v0000018f87285210_0, v0000018f873963e0_0 {0 0 0};
+    %end;
+    .thread T_1;
+    .scope S_0000018f8739da00;
+T_2 ;
+    %vpi_call 3 21 "$dumpfile", "simple4.vcd" {0 0 0};
+    %vpi_call 3 22 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000018f8739da00 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    ".\simplecircuit4.v";
+    ".\simplecircuittb4.v";

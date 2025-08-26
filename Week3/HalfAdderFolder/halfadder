@@ -1,0 +1,80 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000026979d7bc10 .scope module, "halfaddtb" "halfaddtb" 2 1;
+ .timescale 0 0;
+v0000026979c15f90_0 .var "aa", 0 0;
+v0000026979c16030_0 .var "bb", 0 0;
+v0000026979c14e50_0 .net "cy", 0 0, L_0000026979d76bf0;  1 drivers
+v0000026979c14ef0_0 .net "ss", 0 0, L_0000026979d7b6a0;  1 drivers
+S_0000026979d7bda0 .scope module, "add1" "halfadd" 2 4, 3 13 0, S_0000026979d7bc10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "carry";
+    .port_info 4 /NODIR 0 "";
+v0000026979c15d10_0 .net "a", 0 0, v0000026979c15f90_0;  1 drivers
+v0000026979c15db0_0 .net "b", 0 0, v0000026979c16030_0;  1 drivers
+v0000026979c15e50_0 .net "carry", 0 0, L_0000026979d76bf0;  alias, 1 drivers
+v0000026979c15ef0_0 .net "sum", 0 0, L_0000026979d7b6a0;  alias, 1 drivers
+S_0000026979d7d100 .scope module, "c" "andgate" 3 17, 3 7 0, S_0000026979d7bda0;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "y";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+L_0000026979d76bf0 .functor AND 1, v0000026979c15f90_0, v0000026979c16030_0, C4<1>, C4<1>;
+v0000026979d7bf30_0 .net "a", 0 0, v0000026979c15f90_0;  alias, 1 drivers
+v0000026979d7b950_0 .net "b", 0 0, v0000026979c16030_0;  alias, 1 drivers
+v0000026979d7b600_0 .net "y", 0 0, L_0000026979d76bf0;  alias, 1 drivers
+S_0000026979d7d290 .scope module, "s" "xorgate" 3 16, 3 1 0, S_0000026979d7bda0;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "y";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+L_0000026979d7b6a0 .functor XOR 1, v0000026979c15f90_0, v0000026979c16030_0, C4<0>, C4<0>;
+v0000026979d7d420_0 .net "a", 0 0, v0000026979c15f90_0;  alias, 1 drivers
+v0000026979d7d4c0_0 .net "b", 0 0, v0000026979c16030_0;  alias, 1 drivers
+v0000026979c15c70_0 .net "y", 0 0, L_0000026979d7b6a0;  alias, 1 drivers
+    .scope S_0000026979d7bc10;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "halfaddtest.vcd" {0 0 0};
+    %vpi_call 2 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000026979d7bc10 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0000026979d7bc10;
+T_1 ;
+    %vpi_call 2 12 "$monitor", $time, "a=%b, b=%b, sum=%b, carry=%b", v0000026979c15f90_0, v0000026979c16030_0, v0000026979c14ef0_0, v0000026979c14e50_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000026979c15f90_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000026979c16030_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000026979c15f90_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026979c16030_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026979c15f90_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000026979c16030_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026979c15f90_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000026979c16030_0, 0, 1;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    ".\halfaddertb.v";
+    ".\halfadder.v";

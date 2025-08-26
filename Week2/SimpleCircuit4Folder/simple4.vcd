@@ -1,0 +1,75 @@
+$date
+	Mon Aug 11 15:21:17 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_simple_circuit4 $end
+$var wire 1 ! F $end
+$var wire 1 " D $end
+$var reg 1 # O $end
+$var reg 1 $ P $end
+$var reg 1 % T $end
+$scope module M1 $end
+$var wire 1 # O $end
+$var wire 1 $ P $end
+$var wire 1 % T $end
+$var wire 1 ! F $end
+$var wire 1 " D $end
+$scope module G1 $end
+$var wire 1 % a $end
+$var wire 1 $ b $end
+$var wire 1 " y $end
+$upscope $end
+$scope module G3 $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 ! y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x%
+x$
+x#
+x"
+x!
+$end
+#20
+0!
+0"
+0#
+0$
+0%
+#40
+1!
+1#
+#60
+0!
+0#
+1$
+#80
+1!
+1#
+#100
+0!
+0#
+0$
+1%
+#120
+1!
+1#
+#140
+1"
+0#
+1$
+#160
+1#

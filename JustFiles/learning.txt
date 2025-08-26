@@ -1,0 +1,27 @@
+iVerilog - Icarus Verilog 
+It's a simulation and synthesis tool
+Similar to C
+Gate Level Implementation:
+Using the logic gates in the code
+
+Data Flow Level Implementation:
+We can use operator, 
+
+assign - it's going to assign variables values
+
+Module declaration: (module is the start)
+
+module module_name circuit name(port_list);
+    port declarations;
+    variable declarations;
+    description of behaviour
+endmodule
+
+module andgate(y,a,b);
+    input a,b;
+    output y;
+    assign y = a & b;
+endmodule
+
+For every module, we write a testbench file
+

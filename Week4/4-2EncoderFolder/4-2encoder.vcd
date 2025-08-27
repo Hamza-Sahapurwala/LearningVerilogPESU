@@ -1,0 +1,44 @@
+$date
+	Wed Aug 27 10:24:55 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module TB $end
+$var wire 2 ! A [1:0] $end
+$var reg 4 " Y [3:0] $end
+$scope module newen $end
+$var wire 4 # y [3:0] $end
+$var wire 2 $ a [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 $
+b1 #
+b1 "
+b0 !
+$end
+#5
+b1 !
+b1 $
+b10 "
+b10 #
+#10
+b10 !
+b10 $
+b100 "
+b100 #
+#15
+b11 !
+b11 $
+b1000 "
+b1000 #
+#20
